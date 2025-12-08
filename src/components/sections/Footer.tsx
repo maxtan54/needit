@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              3D Print Pro
+              needit
             </h3>
             <p className="text-slate-300 text-sm">
               Precision manufacturing for the future
@@ -91,7 +91,10 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+15551234567" className="hover:text-white transition-colors">
+                <a
+                  href="tel:+15551234567"
+                  className="hover:text-white transition-colors"
+                >
                   (555) 123-4567
                 </a>
               </li>
@@ -101,9 +104,11 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-400">
-          <p>&copy; {new Date().getFullYear()} 3D Print Pro. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} 3D Print Pro. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

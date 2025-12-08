@@ -1,26 +1,26 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
+    const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-      setMobileMenuOpen(false)
+      element.scrollIntoView({ behavior: "smooth" });
+      setMobileMenuOpen(false);
     }
-  }
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
           <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            3D Print Pro
+            needit
           </h1>
         </div>
 
@@ -84,12 +84,16 @@ export default function Header() {
             >
               Contact
             </button>
-            <Button onClick={() => scrollToSection("hero")} size="sm" className="w-full">
+            <Button
+              onClick={() => scrollToSection("hero")}
+              size="sm"
+              className="w-full"
+            >
               Get Started
             </Button>
           </nav>
         </div>
       )}
     </header>
-  )
+  );
 }

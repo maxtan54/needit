@@ -3,45 +3,51 @@ export const galleryItems = [
     id: 1,
     title: "Precision Gear Assembly",
     description: "Complex mechanical components with tight tolerances",
-    imageUrl: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop",
-    category: "Prototypes"
+    imageUrl:
+      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop",
+    category: "Prototypes",
   },
   {
     id: 2,
     title: "Custom Drone Frame",
     description: "Lightweight carbon fiber reinforced frame",
-    imageUrl: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop",
-    category: "Custom Parts"
+    imageUrl:
+      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop",
+    category: "Custom Parts",
   },
   {
     id: 3,
     title: "Architectural Scale Model",
     description: "Detailed building prototype with intricate features",
-    imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=300&fit=crop",
-    category: "Architecture"
+    imageUrl:
+      "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=300&fit=crop",
+    category: "Architecture",
   },
   {
     id: 4,
     title: "Medical Device Prototype",
     description: "Biocompatible material testing prototype",
-    imageUrl: "https://images.unsplash.com/photo-1581092918484-8313e1f7e8c2?w=400&h=300&fit=crop",
-    category: "Medical"
+    imageUrl:
+      "https://images.unsplash.com/photo-1611117775350-ac3950990985?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Medical",
   },
   {
     id: 5,
     title: "Artistic Sculpture",
     description: "Complex organic forms with multiple materials",
-    imageUrl: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=400&h=300&fit=crop",
-    category: "Art & Design"
+    imageUrl:
+      "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=400&h=300&fit=crop",
+    category: "Art & Design",
   },
   {
     id: 6,
     title: "Industrial Tooling",
     description: "High-strength jigs and fixtures",
-    imageUrl: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=400&h=300&fit=crop",
-    category: "Industrial"
-  }
-]
+    imageUrl:
+      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=400&h=300&fit=crop",
+    category: "Industrial",
+  },
+];
 
 export const faqItems = [
   {
