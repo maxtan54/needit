@@ -7,7 +7,8 @@
       "Bash(npx pnpm add:*)",
       "Bash(npx shadcn@latest add:*)",
       "Bash(npx shadcn@latest init -y)",
-      "Bash(npx shadcn@latest init --defaults)"
+      "Bash(npx shadcn@latest init --defaults)",
+      "Bash(pnpm build:*)"
     ],
     "deny": [],
     "ask": []

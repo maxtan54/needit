@@ -2,8 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: "standalone",
-  images: {
+images: {
     remotePatterns: [
       {
         hostname: "www.lakelawnresort.com",

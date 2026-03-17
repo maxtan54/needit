@@ -32,7 +32,7 @@ export function ContactForm() {
     return (
       <div className="text-center py-6">
         <p className="text-2xl mb-2">✓</p>
-        <p className="font-semibold text-neutral-800">We'll be in touch soon!</p>
+        <p className="font-semibold text-neutral-800">We&apos;ll be in touch soon!</p>
         <p className="text-sm text-neutral-500 mt-1">Thank you for reaching out.</p>
         <button
           onClick={() => setStatus("idle")}
