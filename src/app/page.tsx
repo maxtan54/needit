@@ -14,6 +14,31 @@ import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "NeedIt",
+  applicationCategory: "BusinessApplication",
+  description:
+    "Physical NFC tags that open your digital restaurant menu instantly. No app needed — upload a PDF, stick the tag, guests scan to view.",
+  url: "https://needit3d.de",
+  image: "https://needit3d.de/logo.png",
+  offers: {
+    "@type": "AggregateOffer",
+    lowPrice: "14.99",
+    highPrice: "139.99",
+    priceCurrency: "EUR",
+    offerCount: 3,
+  },
+  provider: {
+    "@type": "Organization",
+    name: "NeedIt",
+    url: "https://needit3d.de",
+    logo: "https://needit3d.de/logo.png",
+    email: "info@needit3d.de",
+  },
+};
+
 export default async function HomePage() {
   const t = await getTranslations("HomePage");
 
@@ -52,6 +77,10 @@ export default async function HomePage() {
 
   return (
     <div className="min-h-screen bg-white text-neutral-900 flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       {/* ── Hero ──────────────────────────────────────────────────── */}

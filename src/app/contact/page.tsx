@@ -8,7 +8,11 @@ import { Footer } from "@/components/Footer";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Metadata");
-  return { title: t("contactTitle") };
+  return {
+    title: t("contactTitle"),
+    description: t("contactDescription"),
+    alternates: { canonical: "/contact" },
+  };
 }
 
 export default async function ContactPage() {

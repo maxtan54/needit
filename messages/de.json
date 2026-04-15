@@ -1,9 +1,12 @@
 {
   "Metadata": {
     "homeTitle": "NeedIt — Digitale Speisekarten per NFC",
-    "homeDescription": "Physischer NFC-Tag, der deine digitale Speisekarte sofort öffnet. Keine App, kein Nachdruck, kein Aufwand. Ab 14,99 €.",
-    "aboutTitle": "Über uns",
-    "contactTitle": "Kontakt"
+    "homeDescription": "Physische NFC-Tags, die deine digitale Speisekarte sofort öffnen. Keine App, kein Nachdruck, kein Aufwand. PDF-Speisekarte hochladen, Tag aufkleben, Gäste scannen. Ab 14,99 €.",
+    "homeKeywords": "digitale Speisekarte, NFC Speisekarte, Restaurant Speisekarte, QR-Code Speisekarte, kontaktlose Speisekarte, digitale Speisekarte für Restaurants, NFC-Tag Restaurant, papierlose Speisekarte, Restaurant Technologie, Speisekarte digitalisieren, 3D-Druck, 3D-gedruckter NFC-Tag, 3D-Druck Restaurant, individueller 3D-gedruckter Menü-Tag, 3D-Druck NFC, 3D-gedrucktes Zubehör für Restaurants",
+    "aboutTitle": "Über NeedIt — Unsere Geschichte",
+    "aboutDescription": "Erfahre, wie NeedIt Restaurants hilft, mit einfachen NFC-Speisekarten-Tags digital zu werden. Keine App nötig, keine Abos — einfach tippen und Speisekarte ansehen.",
+    "contactTitle": "Kontakt — NeedIt digitale Speisekarte",
+    "contactDescription": "Kontaktiere NeedIt, um NFC-Speisekarten-Tags für dein Restaurant zu bestellen. Schnelle Antwort, weltweiter Versand und einfache Einrichtung in unter 10 Minuten."
   },
   "Navbar": {
     "about": "Über uns",

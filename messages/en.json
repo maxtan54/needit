@@ -1,9 +1,12 @@
 {
   "Metadata": {
     "homeTitle": "NeedIt — Digital menus via NFC",
-    "homeDescription": "Physical NFC that open your digital menu instantly. No app, no reprinting, no hassle. Starting at $24.99.",
-    "aboutTitle": "About",
-    "contactTitle": "Contact"
+    "homeDescription": "Physical NFC tags that open your digital restaurant menu instantly. No app, no reprinting, no hassle. Upload your PDF menu, stick the tag, and guests scan to view. Starting at €14.99.",
+    "homeKeywords": "digital menu, NFC menu, restaurant menu, QR code menu, contactless menu, digital menu for restaurants, NFC tag restaurant, paperless menu, restaurant technology, menu digitization, 3D print, 3D printed NFC tag, 3D printing restaurant, custom 3D printed menu tag, 3D print NFC, 3D printed accessories for restaurants",
+    "aboutTitle": "About NeedIt — Our Story",
+    "aboutDescription": "Learn how NeedIt is helping restaurants go digital with simple NFC menu tags. No app needed, no subscriptions — just tap and view the menu.",
+    "contactTitle": "Contact NeedIt — Get Your Digital Menu",
+    "contactDescription": "Get in touch with NeedIt to order NFC menu tags for your restaurant. Fast response, worldwide shipping, and easy setup in under 10 minutes."
   },
   "Navbar": {
     "about": "About",

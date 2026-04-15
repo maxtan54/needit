@@ -18,11 +18,50 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://needit3d.de";
+
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Metadata");
   return {
     title: { default: t("homeTitle"), template: "%s | NeedIt" },
     description: t("homeDescription"),
+    keywords: t("homeKeywords"),
+    metadataBase: new URL(SITE_URL),
+    alternates: {
+      canonical: "/",
+    },
+    openGraph: {
+      type: "website",
+      siteName: "NeedIt",
+      title: t("homeTitle"),
+      description: t("homeDescription"),
+      url: SITE_URL,
+      images: [
+        {
+          url: "/logo.png",
+          width: 512,
+          height: 512,
+          alt: "NeedIt — Digital menus via NFC",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("homeTitle"),
+      description: t("homeDescription"),
+      images: ["/logo.png"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
   };
 }
 
