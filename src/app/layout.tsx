@@ -18,11 +18,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "NeedIt — Digital menus via NFC & QR tags",
+    default: "NeedIt — Digital menus via NFC",
     template: "%s | NeedIt",
   },
   description:
-    "Physical NFC & QR tags that open your digital PDF menu instantly. No app, no reprinting, no hassle. Starting at $24.99.",
+    "Physical NFC that open your digital menu instantly. No app, no reprinting, no hassle. Starting at $24.99.",
 };
 
 export default function RootLayout({

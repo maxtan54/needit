@@ -8,9 +8,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const NAV_LINKS = [
-  { href: "/products", label: "Products" },
   { href: "/about", label: "About" },
-  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -22,7 +20,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5">
-          <Image src="/logo.webp" alt="NeedIt" width={32} height={32} className="rounded-lg" />
+          <Image src="/logo.png" alt="NeedIt" width={32} height={32} />
           <span className="font-bold text-neutral-900 text-lg">NeedIt</span>
         </Link>
 
