@@ -19,7 +19,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${restaurant.name} — Menu`,
-    description: restaurant.description ?? `Digital menu for ${restaurant.name}`,
+    description:
+      restaurant.description ??
+      `View the digital menu for ${restaurant.name}. Powered by NeedIt NFC menu tags.`,
+    openGraph: {
+      title: `${restaurant.name} — Menu`,
+      description:
+        restaurant.description ??
+        `View the digital menu for ${restaurant.name}`,
+      type: "website",
+    },
+    robots: {
+      index: false,
+      follow: false,
+    },
   };
 }
 

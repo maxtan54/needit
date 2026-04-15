@@ -9,7 +9,11 @@ import { Footer } from "@/components/Footer";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Metadata");
-  return { title: t("aboutTitle") };
+  return {
+    title: t("aboutTitle"),
+    description: t("aboutDescription"),
+    alternates: { canonical: "/about" },
+  };
 }
 
 export default async function AboutPage() {
