@@ -3,18 +3,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const NAV_LINKS = [
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
-
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations("Navbar");
+
+  const NAV_LINKS = [
+    { href: "/about", label: t("about") },
+    { href: "/contact", label: t("contact") },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur-md">
@@ -43,7 +45,7 @@ export function Navbar() {
 
         <div className="hidden md:flex">
           <Button asChild>
-            <Link href="/contact">Order Now</Link>
+            <Link href="/contact">{t("orderNow")}</Link>
           </Button>
         </div>
 
@@ -51,7 +53,7 @@ export function Navbar() {
         <button
           className="md:hidden p-1.5 rounded-lg hover:bg-neutral-100 transition-colors"
           onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
+          aria-label={t("toggleMenu")}
         >
           {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -77,7 +79,7 @@ export function Navbar() {
           <div className="mt-3 pt-3 border-t border-neutral-100">
             <Button asChild className="w-full">
               <Link href="/contact" onClick={() => setOpen(false)}>
-                Order Now
+                {t("orderNow")}
               </Link>
             </Button>
           </div>

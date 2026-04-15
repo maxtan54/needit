@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import ReactQueryProvider from "@/lib/providers/query";
 import { ThemeProvider } from "@/lib/providers/theme";
 import AuthProvider from "@/lib/providers/auth";
@@ -16,23 +18,25 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "NeedIt — Digital menus via NFC",
-    template: "%s | NeedIt",
-  },
-  description:
-    "Physical NFC that open your digital menu instantly. No app, no reprinting, no hassle. Starting at $24.99.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Metadata");
+  return {
+    title: { default: t("homeTitle"), template: "%s | NeedIt" },
+    description: t("homeDescription"),
+  };
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
     <html
-      lang="en"
+      lang={locale}
       suppressHydrationWarning
       className="min-h-[100%] flex flex-col"
     >
@@ -46,8 +50,10 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <ReactQueryProvider>
-              {children}
-              <Toaster />
+              <NextIntlClientProvider messages={messages}>
+                {children}
+                <Toaster />
+              </NextIntlClientProvider>
             </ReactQueryProvider>
           </ThemeProvider>
         </AuthProvider>

@@ -1,18 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
-const LINKS = {
-  product: [
-    { href: "/#how-it-works", label: "How it works" },
-  ],
-  company: [
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-    { href: "mailto:info@needit3d.de", label: "info@needit3d.de" },
-  ],
-};
+import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export function Footer() {
+  const t = useTranslations("Footer");
+
+  const LINKS = {
+    product: [{ href: "/#how-it-works", label: t("howItWorks") }],
+    company: [
+      { href: "/about", label: t("about") },
+      { href: "/contact", label: t("contact") },
+    ],
+  };
+
   return (
     <footer className="border-t border-neutral-200 bg-neutral-50 pt-14 pb-8 px-4">
       <div className="max-w-6xl mx-auto">
@@ -23,14 +26,13 @@ export function Footer() {
               <span className="font-bold text-neutral-900">NeedIt</span>
             </Link>
             <p className="text-sm text-neutral-500 leading-relaxed max-w-xs">
-              Physical NFC that open your digital menu instantly. No app, no
-              reprinting.
+              {t("tagline")}
             </p>
           </div>
 
           <div>
             <h4 className="font-semibold text-sm text-neutral-800 mb-4">
-              Product
+              {t("product")}
             </h4>
             <ul className="space-y-2.5">
               {LINKS.product.map(({ href, label }) => (
@@ -48,7 +50,7 @@ export function Footer() {
 
           <div>
             <h4 className="font-semibold text-sm text-neutral-800 mb-4">
-              Company
+              {t("company")}
             </h4>
             <ul className="space-y-2.5">
               {LINKS.company.map(({ href, label }) => (
@@ -61,17 +63,26 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href="mailto:info@needit3d.de"
+                  className="text-sm text-neutral-500 hover:text-neutral-900 transition-colors"
+                >
+                  info@needit3d.de
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-neutral-200 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-neutral-400">
-            © {new Date().getFullYear()} NeedIt. All rights reserved.
+            {t("copyright", { year: new Date().getFullYear() })}
           </p>
-          <p className="text-xs text-neutral-400">
-            Made with care for restaurants everywhere.
-          </p>
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher />
+            <p className="text-xs text-neutral-400">{t("madeWith")}</p>
+          </div>
         </div>
       </div>
     </footer>
